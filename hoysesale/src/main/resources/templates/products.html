@@ -6,7 +6,7 @@
     <title>Index</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" th:href="@{/css/stylesheet.css}">
 
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <!--APP JAVASCRIPT-->
-    <script type="text/javascript" src="../static/js/app.js"></script>
+    <script type="text/javascript" th:src="@{/js/app.js}"></script>
 
   </head>
   <body>
@@ -43,7 +43,11 @@
             <h3 style="color:white;">Categorías</h3>
             <div class="filtros-lista">
               <a class="list-group-item list-group-item-action active" data-filter="*" id="Todos">Todos</a>
-              <a th:each="" class="list-group-item list-group-item-action active" data-filter="*" id="Todos">Todos</a>
+           
+           	  <!-- 
+           	  <a class="list-group-item list-group-item-action" data-filter="*" id="Todos"></a>
+           	  -->	
+           
             </div>
             <input type="text" id="search" placeholder="Búsqueda" style="width:100%; padding-left: 20px;" value="">
           </div>
@@ -51,6 +55,7 @@
           <div class="section-products col-12 col-md-12 col-lg-9">
             <div class="container-fluid products-list grid" id="grid">
             
+            <!--
             	<div th:each="" class="card" style="width: 18rem;">
 			      <img src="" class="card-img-top" alt="...">
 			      <div class="card-body">
@@ -60,7 +65,8 @@
 			        <a class="btn btn-primary agregar-quitar agregar">Agregar al carro</a>
 			      </div>
 			    </div>
-
+			-->
+			
             </div>
           </div>
         </div>
@@ -75,7 +81,7 @@
     </div>
 
     <!--SCRIPTS-->
-    <script type="text/javascript" src="../static/js/productos.js"></script>
+    <script type="text/javascript" th:src="@{/js/productos.js}"></script>
 
   </body>
 </html>
