@@ -1,4 +1,4 @@
-package com.dh.hoysesale.estidades;
+package com.dh.hoysesale.entidades;
 
 public class Bebida{
 	
