@@ -22,6 +22,10 @@ public class HomeController {
 
 	@GetMapping(value="/products")
 	public String products (Model model) {
+		
+		serviceProducts.getCategoriesList();
+		serviceProducts.getProductsList();
+		
 		return "products";
 	}
 	
