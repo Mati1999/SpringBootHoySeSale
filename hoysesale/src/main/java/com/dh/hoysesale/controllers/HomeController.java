@@ -1,34 +1,62 @@
 package com.dh.hoysesale.controllers;
 
+
+
 import java.util.Locale;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 
 @Controller
 public class HomeController {
 
-	/*GetMapping:
+	/*
+	 * 
+	  GetMapping: ----(leer, consultar)
 		-- Completar la lista de productos.
-		-- Completar la lista de filtros.
-	  PostMapping:
-		-- Para Editar / Eliminar
-	  PutMapping:
-		-- Para agregar*/
+		
+		-- Completar la lista de filtros. ???
+		
+	  PostMapping: ----(crear)
+	    -- Para agregar
+		 
+	  PutMapping ----(editar)
+		-- Para Editar
+		
+	  DeleteMapping 
+	    -- Eliminar  
+	*/
 		
 	
 	
 
-	@RequestMapping(value="/products", method= RequestMethod.GET)
+	@GetMapping("/products")
 	public String productController (Locale locale, Model model) {
 		return "products";
 	}
 	
 	
+	@PostMapping()  //para agregar producto
+	public String createProduct() {
+		return "";
+	}
+	
+	@PutMapping		//para editar producto
+	public String editProduct() {
+		return "";
+	}
 	
 	
+	@DeleteMapping      //para eliminar producto
+	public String deleteProduct() {
+		return "";
+	}
+	 
+	 
 }
