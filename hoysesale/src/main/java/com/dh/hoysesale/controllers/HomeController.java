@@ -15,13 +15,19 @@ public class HomeController {
 	@Qualifier("ServiceProductsImpl")
 	private IServiceProducts serviceProducts;
 	
+	@GetMapping(value="/")
+	public String home (Model model) {
+		return "index";
+	}
 
 	@GetMapping(value="/products")
-	public String productController (Model model) {
-		
-		
-		
+	public String products (Model model) {
 		return "products";
+	}
+	
+	@GetMapping(value="/preg_frecuentes")
+	public String pregFrecuentes (Model model) {
+		return "preg_frecuentes";
 	}
 	
 }
