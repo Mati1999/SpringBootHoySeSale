@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6  {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  background-image: url('../img/bg-home.jpg');
+  background-image: url('../images/bg-home.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
