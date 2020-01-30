@@ -1,10 +1,13 @@
 package com.dh.hoysesale.IServices;
 
-import java.awt.List;
+import java.util.ArrayList;
+
+import com.dh.hoysesale.entidades.Bebida;
+import com.dh.hoysesale.entidades.Categoria;
 
 public interface IServiceProducts {
 
-	public List getProductsList();
-	public List getCategoriesList();
+	public ArrayList<Bebida> getProductsList();
+	public ArrayList<Categoria> getCategoriesList();
 	
 }

@@ -48,11 +48,7 @@
             <h3 style="color:white;">Categorías</h3>
             <div class="filtros-lista">
               <a class="list-group-item list-group-item-action active" data-filter="*" id="Todos">Todos</a>
-           
-           	  <!-- 
-           	  <a class="list-group-item list-group-item-action" data-filter="*" id="Todos" th:text=""></a>
-           	  -->	
-           
+           	  <a th:each="categoria: ${listaCategorias}" th:text="${categoria.descripcion}" class="list-group-item list-group-item-action" data-filter="*" id="Todos"></a>	
             </div>
             <input type="text" id="search" placeholder="Búsqueda" style="width:100%; padding-left: 20px;" value="">
           </div>
@@ -60,17 +56,17 @@
           <div class="section-products col-12 col-md-12 col-lg-9">
             <div class="container-fluid products-list grid" id="grid">
             
-            <!--
+            
             	<div th:each="bebida: ${listaBebidas}" class="card" style="width: 18rem;">
 			      <img src="" class="card-img-top" alt="...">
 			      <div class="card-body">
-			        <h5 class="card-title" th:text="bebida.nombre"></h5>
-			        <p class="card-text" th:text="bebida.descripcion"></p>
-			        <p class="card-price" th:text="bebida.precio"></p>
+			        <h5 class="card-title" th:text="${bebida.nombre}"></h5>
+			        <p class="card-text" th:text="${bebida.descripcion}"></p>
+			        <p class="card-price" th:text="${bebida.precio}"></p>
 			        <a class="btn btn-primary agregar-quitar agregar">Editar</a>
 			      </div>
 			    </div>
-			-->
+			
 			
             </div>
           </div>
