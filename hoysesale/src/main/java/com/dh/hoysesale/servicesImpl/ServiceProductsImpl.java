@@ -15,11 +15,12 @@ public class ServiceProductsImpl implements IServiceProducts {
 	public ArrayList<Bebida> getProductsList() {
 		ArrayList<Bebida> listaBebidas = new ArrayList<Bebida>();
 		
-		for (int i = 0; i < 6; i++) {
+		for (int i = 1; i < 7; i++) {
 			Bebida bebida = new Bebida();
 			bebida.setNombre("Producto " + i);
 			bebida.setDescripcion("Este es el producto " + i);
 			bebida.setPrecio(100 * i);
+			bebida.setImagen("../images/bebida-" + i + ".jpg");
 			listaBebidas.add(bebida);
 		}
 		

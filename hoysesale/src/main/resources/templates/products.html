@@ -58,7 +58,7 @@
             
             
             	<div th:each="bebida: ${listaBebidas}" class="card" style="width: 18rem;">
-			      <img src="" class="card-img-top" alt="...">
+			      <img th:src=${bebida.imagen} class="card-img-top" alt="...">
 			      <div class="card-body">
 			        <h5 class="card-title" th:text="${bebida.nombre}"></h5>
 			        <p class="card-text" th:text="${bebida.descripcion}"></p>
