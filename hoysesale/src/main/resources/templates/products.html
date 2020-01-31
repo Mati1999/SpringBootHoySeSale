@@ -43,7 +43,7 @@
       <div class="container-fluid">
 
         <!--PRODUCTOS-->
-        <div class="d-flex row justify-content-around">
+        <div class="d-flex row justify-content-around" style="margin: 0px;">
           <div class="filters list-group container-fluid categorias col-10 col-md-10 col-lg-2 d-flex">
             <h3 style="color:white;">Categorías</h3>
             <div class="filtros-lista">
@@ -51,9 +51,11 @@
            	  <a th:each="categoria: ${listaCategorias}" th:text="${categoria.descripcion}" class="list-group-item list-group-item-action" data-filter="*" id="Todos"></a>	
             </div>
             <input type="text" id="search" placeholder="Búsqueda" style="width:100%; padding-left: 20px;" value="">
+            <a class="btn btn-primary agregar-quitar agregar" data-toggle="modal" data-target="#addEditProduct" style="margin-top: 20px; ">Agregar Producto</a>
           </div>
 
           <div class="section-products col-12 col-md-12 col-lg-9">
+            
             <div class="container-fluid products-list grid" id="grid">
             
             
@@ -63,7 +65,7 @@
 			        <h5 class="card-title" th:text="${bebida.nombre}"></h5>
 			        <p class="card-text" th:text="${bebida.descripcion}"></p>
 			        <p class="card-price" th:text="${bebida.precio}"></p>
-			        <a class="btn btn-primary agregar-quitar agregar">Editar</a>
+			        <a class="btn btn-primary agregar-quitar agregar" data-toggle="modal" data-target="#addEditProduct">Editar</a>
 			      </div>
 			    </div>
 			
@@ -74,6 +76,50 @@
         
       </div>
       
+      <!--ADD EDIT PRODUCT MODAL-->
+      <div class="modal fade" id="addEditProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-body animated slideInDown" style="padding: 0;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content decoracionBodyLogIn1">
+            <div class="modal-header decoracionHeaderLogIn decoracionHeaderLogIn1">
+              <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active botonHeader" href="#signin-tab" data-toggle="tab" role="tab" aria-selected="false"><i class="czi-unlocked mr-2 mt-n1"></i>Producto</a></li>
+                
+              </ul>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span class="botonDeCierre" aria-hidden="true">×</span></button>
+            </div>
+
+               <!-- LOGIN -->
+
+            <div class="modal-body tab-content decoracionBodyLogIn">
+              <form class="needs-validation tab-pane fade active show" autocomplete="off" novalidate="" id="signin-tab">
+                <div class="form-group">
+                  <label class="" for="su-name">Título</label>
+                  <input class="form-control colorDeImput2" type="text" id="su-name" placeholder="Título" required="">
+                  <div class="invalid-feedback">Ingrese su nombre del producto.</div>
+                </div>
+                <div class="form-group">
+                  <label class="" for="su-last_name">Descripción</label>
+                  <input class="form-control colorDeImput2" type="text" id="su-name" placeholder="Descripción" required="">
+                  <div class="invalid-feedback">Ingrese la descrpción del producto.</div>
+                </div>
+                <div class="form-group">
+                  <label class="" for="su-last_name">Precio</label>
+                  <input class="form-control colorDeImput2" type="number" id="su-name" placeholder="Precio" required="">
+                  <div class="invalid-feedback">Ingrese el precio producto.</div>
+                </div>
+                <div class="text-center p-2">
+                  <button class="btn btn-outline-dark btn-lg" type="submit">Guardar</button>
+                </div>
+              </form>
+
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+            
        <!--FOOTER-->
       <header th:replace="common/footer::footer">
 
