@@ -6,4 +6,5 @@ public class Categoria{
 	private String descripcion;
 	private boolean vigencia;
 	
+	
 }
